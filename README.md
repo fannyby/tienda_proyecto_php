@@ -5,27 +5,20 @@ Esta es una aplicación web para la gestión de inventario de componentes de ord
 ## 🚀 Características
 
 Gestión de productos: CPU, GPU, memoria, almacenamiento, etc.
-
 Compatible con PostgreSQL y MySQL.
 
 ## 📂 Requisitos
 
 PHP ≥ 8.0
-
 PostgreSQL o MySQL/MariaDB
-
 Navegador moderno
-
 Se recomienda el servidor XAMPP o el servidor embebido de PHP (opcional)
 
 ## 📂 Detalles de la Estructura
 
 conexion_pg.php: conexión PDO a PostgreSQL
-
 conectar_mysql.php: conexión PDO a MySQL
-
 index.php: ingreso y listado de productos
-
 README.md: esta documentación
 
 ## 📗 Estructura del Proyecto
@@ -80,7 +73,7 @@ https://dev.mysql.com/downloads/ o usar XAMPP
 
 - 2. Crear base de datos tienda_inventario
 
-- a. Crear la base de datos correspondiente:
+- a. base de datos correspondiente:
 
 Tienda_Inventario en PostgreSQL
 
@@ -105,29 +98,30 @@ Puedes exportar el inventario a CSV o PDF desde la interfaz.
 - e. Configuración de conexión PDO
 
 PostgreSQL:
-
+´´sql
 $pdo = new PDO("pgsql:host=localhost;port=5432;dbname=tienda_inventario", "postgres", "");
-
+´´´
 MySQL:
-
+´´sql
 $pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", [
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
+´´´
 
 - f. Migración de PostgreSQL a MySQL
-
+´´´bash
 pg_dump -s -U postgres tienda_inventario > tienda_pg.sql
-
+´´´
 Convierte con SQLines u otra herramienta online: https://sqlines.com/online
 
 Guarda como tienda_mysql.sql e impórtalo con mysql o phpMyAdmin.
 
 ## 📦 Clonar el Proyecto
-
-git clone https://github.com/tuusuario/tienda_inventario.git
+´´´bash
+git clone https://github.com/fanny/tienda_inventario.git
 cd tienda_inventario
-
+´´´
 
 ## 🛠 Instalar driver PDO para MySQL (si usas MySQL)
 
@@ -141,21 +135,21 @@ ext=pdo_mysql
 ## 📥 Crear tablas y cargar datos
 
 - PostgreSQL:
-
+´´´
 psql -U postgres -d tienda_inventario -f tienda_pg.sql
-
+´´ 
 - MySQL:
-
+´´ 
 mysql -u root -p tienda_inventario < tienda_mysql.sql
-
+´´ 
 ## 👁️ Ejecutar la App con PHP embebido (Visual Studio Code o Terminal)
-
+´´´bash
 "C:\Program Files\php-8.2.27-Win32-vs16-x64\php.exe" -S localhost:8000
-
+´´´
 Abre tu navegador en:
-
+´´´bash
 http://localhost:8000/
-
+´´´
 Deberías ver:
 
 Bienvenido a mi tienda 🛒
