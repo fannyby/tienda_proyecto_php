@@ -1,7 +1,10 @@
 # Tienda Inventario 
 
-Esta es una aplicación web para la gestión de inventario de componentes de ordenadores.
+Esta es una aplicación web para la gestión de una tienda y control del inventario de componentes de ordenadores.
+
 Soporta bases de datos PostgreSQL y MySQL/MariaDB usando PHP con PDO.
+
+Usando una variable como $SGBD para indicar el sistema de gestión de base de datos que quieres usar (por ejemplo, 'mysql' o 'pg' para PostgreSQL), estás creando una configuración flexible y reutilizable que te permite cambiar de motor de base de datos sin modificar todo tu código. Solo necesitas cambiar el valor de esa variable para que la conexión se realice al SGBD deseado.
 
 ## 🚀 Características
 
@@ -11,7 +14,7 @@ Compatible con PostgreSQL y MySQL.
 
 ## 📂 Requisitos
 
-PHP ≥ 8.0
+PHP ≥ 8.2
 
 PostgreSQL o MySQL/MariaDB
 
@@ -31,6 +34,7 @@ README.md: esta la documentación
 
 ## 📗 Estructura del Proyecto
 
+TIENDA_PROYECTO_PHP
 │   categorias.php
 │   conectar.php
 │   conectar_mysql.php
@@ -90,12 +94,22 @@ https://dev.mysql.com/downloads/
 
         -tienda_schema_mysql.sql para MySQL
 
-  - c. Configurar conexiones en archivos PHP
+  - c. Configurar conexiones 
+```PHP
+        // CONFIGURACION DE VARIABLES
+        $SGBD = 'mysql'; // Sistema de gestión de base de datos mysql pg 
+```
+```bash
+La variable $SGBD actúa como un interruptor que define a qué base de datos se conectará tu aplicación. Según el valor que le asignes (por ejemplo, 'mysql' o 'pg')
+```
 
-        -conectar_mysql.php para MySQL
 
-        -conexion_pg.php para PostgreSQL
+-Ir a fichero
+```bash 
 
+            conectar.php 
+  ```  
+        
   - d. Exportar datos
 
         -Puedes exportar el inventario a CSV o PDF desde la interfaz.
@@ -109,7 +123,7 @@ $pdo = new PDO("pgsql:host=localhost;port=5432;dbname=tienda_inventario", "postg
 MySQL:
 ```bash 
 
-$pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", )
+$pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", );
     
 ```
 
