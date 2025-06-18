@@ -169,7 +169,8 @@ Bienvenido a mi tienda 🛒
 
 ## 💡 Recomendación
 ```
-Si prefieres una solución todo-en-uno que incluya PHP, Apache y MySQL, puedes instalar XAMPP, ideal para desarrollo web en Windows:
+Si prefieres una solución todo-en-uno que incluya PHP, Apache y MySQL, puedes instalar XAMPP, ideal para desarrollo web en Windows.
+```
 
 
 
