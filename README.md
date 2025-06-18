@@ -1,6 +1,7 @@
 # Tienda Inventario 
 
-Esta es una aplicación web para la gestión de inventario de componentes de ordenadores. Soporta bases de datos PostgreSQL y MySQL/MariaDB usando PHP con PDO.
+Esta es una aplicación web para la gestión de inventario de componentes de ordenadores.
+Soporta bases de datos PostgreSQL y MySQL/MariaDB usando PHP con PDO.
 
 ## 🚀 Características
 
@@ -67,15 +68,14 @@ README.md: esta la documentación
 - 1.Instalar PostgreSQL y/o MySQL
 
 PostgreSQL
-
+```
 https://www.postgresql.org/download/
-
-Crear base de datos tienda_inventario
+```
 
 MySQL/MariaDB
-
+```
 https://dev.mysql.com/downloads/ 
-
+```
 - 2.Crear base de datos 
 
   - a. BD correspondiente:
@@ -86,9 +86,9 @@ https://dev.mysql.com/downloads/
 
   - b. Importar:
 
-        -create_schema_pg.sql para PostgreSQL
+        -tienda_schema_pg.sql para PostgreSQL
 
-        -inventario_schema_create_mysql.sql para MySQL
+        -tienda_schema_mysql.sql para MySQL
 
   - c. Configurar conexiones en archivos PHP
 
@@ -109,10 +109,8 @@ $pdo = new PDO("pgsql:host=localhost;port=5432;dbname=tienda_inventario", "postg
 MySQL:
 ```bash 
 
-$pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", [
-    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
+$pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", )
+    
 ```
 
 
