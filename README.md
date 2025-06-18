@@ -59,7 +59,7 @@ TIENDA_PROYECTO_PHP
 
 ## 💡 Instalación
 
-- 1. Instalar PostgreSQL y/o MySQL
+- 1.Instalar PostgreSQL y/o MySQL
 
 PostgreSQL
 
@@ -69,87 +69,104 @@ Crear base de datos tienda_inventario
 
 MySQL/MariaDB
 
-https://dev.mysql.com/downloads/ o usar XAMPP
+https://dev.mysql.com/downloads/ 
 
-- 2. Crear base de datos tienda_inventario
+- 2.Crear base de datos 
 
-- a. base de datos correspondiente:
+        - a. BD correspondiente:
 
 Tienda_Inventario en PostgreSQL
 
 tienda_inventario en MySQL
 
-- b. Importar:
+        - b. Importar:
 
 tienda_inventario.sql para PostgreSQL
 
 inventario_schema_create_mysql.sql para MySQL
 
-- c. Configurar conexiones en archivos PHP
+       - c. Configurar conexiones en archivos PHP
 
 conectar_mysql.php para MySQL
 
 conexion_pg.php para PostgreSQL
 
-- d. Exportar datos
+        - d. Exportar datos
 
 Puedes exportar el inventario a CSV o PDF desde la interfaz.
 
-- e. Configuración de conexión PDO
+        - e. Configuración de conexión PDO
 
 PostgreSQL:
-´´sql
+```SQL
 $pdo = new PDO("pgsql:host=localhost;port=5432;dbname=tienda_inventario", "postgres", "");
-´´´
+```
 MySQL:
-´´sql
+```bash 
+
 $pdo = new PDO("mysql:host=localhost;dbname=tienda_inventario", "root", "", [
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
-´´´
+```
+
 
 - f. Migración de PostgreSQL a MySQL
-´´´bash
+```bash
 pg_dump -s -U postgres tienda_inventario > tienda_pg.sql
-´´´
-Convierte con SQLines u otra herramienta online: https://sqlines.com/online
+```
 
-Guarda como tienda_mysql.sql e impórtalo con mysql o phpMyAdmin.
+
+
+Mediante una herramienta se convierte y se guarda como tienda_mysql.sql e impórtalo con mysql o phpMyAdmin.
+```bash
 
 ## 📦 Clonar el Proyecto
-´´´bash
-git clone https://github.com/fanny/tienda_inventario.git
+```bash
+git clone https://github.com/fannyby/tienda_proyecto_php.git
 cd tienda_inventario
-´´´
+```bash
+
 
 ## 🛠 Instalar driver PDO para MySQL (si usas MySQL)
-
 sudo apt-get install php-mysql
 sudo systemctl restart apache2
 
 En Windows, asegúrate de tener habilitado:
-
 ext=pdo_mysql
+```
 
 ## 📥 Crear tablas y cargar datos
 
 - PostgreSQL:
-´´´
-psql -U postgres -d tienda_inventario -f tienda_pg.sql
-´´ 
+```bash
+
+psql -U postgres -d tienda_inventario -f tienda_inventario.sql
+```
+
 - MySQL:
-´´ 
-mysql -u root -p tienda_inventario < tienda_mysql.sql
-´´ 
+```bash
+
+mysql -u root -p tienda_inventario < inventario_schema_create_mysql.sql
+```
+
+
 ## 👁️ Ejecutar la App con PHP embebido (Visual Studio Code o Terminal)
-´´´bash
+```bash
+
 "C:\Program Files\php-8.2.27-Win32-vs16-x64\php.exe" -S localhost:8000
-´´´
+```
+
+
 Abre tu navegador en:
-´´´bash
+```bash
+
 http://localhost:8000/
-´´´
+```
+
+
+
+```bash
 Deberías ver:
 
 Bienvenido a mi tienda 🛒
