@@ -33,7 +33,7 @@ index.php: ingreso y listado de productos
 README.md: esta la documentación
 
 ## 📗 Estructura del Proyecto
-´´´
+```
 TIENDA_PROYECTO_PHP
 │   categorias.php
 │   conectar.php
@@ -65,7 +65,7 @@ TIENDA_PROYECTO_PHP
 │
 └───img
         imagen.jpg
-´´´
+```
 
 ## 💡 Instalación
 
