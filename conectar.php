@@ -41,9 +41,8 @@ try {
 } else {
     die("SGBD no soportado. Por favor, usa 'mysql' o 'pg'.");
 }
-?>
 
-
+``` 
 
 
 
