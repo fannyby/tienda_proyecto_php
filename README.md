@@ -100,7 +100,8 @@ https://dev.mysql.com/downloads/
         $SGBD = 'mysql'; // Sistema de gestión de base de datos mysql pg 
 ```
 ```bash
-La variable $SGBD actúa como un interruptor que define a qué base de datos se conectará tu aplicación. Según el valor que le asignes (por ejemplo, 'mysql' o 'pg')
+La variable $SGBD actúa como un interruptor que define a qué base de datos se conectará tu app. 
+Según el valor que le asignes (por ejemplo, 'mysql' o 'pg')
 ```
 
 
@@ -183,7 +184,8 @@ Bienvenido a mi tienda 🛒
 
 ## 💡 Recomendación
 ```
-Si prefieres una solución todo-en-uno que incluya PHP, Apache y MySQL, puedes instalar XAMPP, ideal para desarrollo web en Windows.
+Si prefieres una solución todo-en-uno que incluya PHP, Apache y MySQL, puedes instalar XAMPP,
+ideal para desarrollo web en Windows.
 ```
 
 
