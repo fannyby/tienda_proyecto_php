@@ -35,36 +35,39 @@ README.md: esta la documentación
 ## 📗 Estructura del Proyecto
 ```
 TIENDA_PROYECTO_PHP
-│   categorias.php
-│   conectar.php
-│   conectar_mysql.php
-│   conectar_pg.php
-│   exportar_historial_csv.php
-│   index.html
-│   index.php
-│   info.php
-│   ingresar.php
-│   insertar_producto.php
-│   inventario.php
-│   marcas.php
-│   obtener_categorias.php
-│   obtener_marcas.php
-│   obtener_productos.php
-│   productos.php
-│   README.md
-│   script.js
-│   tienda_schema_mysql.sql
-│   tienda_schema_pg.sql
-│
-├───css
-│       estilo.css
-│
-├───docs
-│       Doc_Instalacion php.pdf
-│       Doc_tienda_inv.pdf
-│
-└───img
+ª   categorias.php
+ª   conectar.php
+ª   conectar_mysql.php
+ª   conectar_pg.php
+ª   estructura_proyecto.txt
+ª   exportar_historial_csv.php
+ª   index.html
+ª   index.php
+ª   info.php
+ª   ingresar.php
+ª   insertar_producto.php
+ª   inventario.php
+ª   marcas.php
+ª   obtener_categorias.php
+ª   obtener_marcas.php
+ª   obtener_productos.php
+ª   productos.php
+ª   README.md
+ª   README.pdf
+ª   script.js
+ª   tienda_schema_mysql.sql
+ª   tienda_schema_pg.sql
+ª   
++---css
+ª       estilo.css
+ª       
++---docs
+ª       Doc_Instalacion php.pdf
+ª       Doc_tienda_inv.pdf
+ª       
++---img
         imagen.jpg
+
 ```
 
 ## 💡 Instalación
