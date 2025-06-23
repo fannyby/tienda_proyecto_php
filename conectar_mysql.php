@@ -7,7 +7,7 @@ $host = 'localhost';
 $port = '3306';
 $dbname = 'tienda_inventario';
 $user = 'root';
-$password = 'skarleth2009';
+$password = 'clave';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $user, $password);
